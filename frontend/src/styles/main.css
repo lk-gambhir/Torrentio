@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design System: Hand-Drawn ── */
+
+:root {
+  --wobble: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --wobble-md: 225px 25px 200px 25px / 25px 200px 25px 225px;
+  --wobble-sm: 40px 10px 50px 10px / 10px 50px 10px 40px;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-pencil font-hand text-lg;
+    background-image: radial-gradient(#e5e0d8 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-kalam font-bold;
+  }
+
+  *, *::before, *::after {
+    border-color: #2d2d2d;
+  }
+}
+
+@layer components {
+
+  /* ── Wobbly Buttons ── */
+  .btn {
+    @apply bg-white border-[3px] border-pencil text-pencil font-hand
+           shadow-hard px-6 py-2 cursor-pointer
+           transition-all duration-100 ease-in-out;
+    border-radius: var(--wobble);
+  }
+  .btn:hover {
+    @apply bg-marker text-white shadow-hard-sm
+           translate-x-[2px] translate-y-[2px] rotate-1;
+  }
+  .btn:active {
+    @apply shadow-none translate-x-[4px] translate-y-[4px];
+  }
+  .btn:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .btn:disabled:hover {
+    @apply bg-white text-pencil shadow-hard translate-x-0 translate-y-0 rotate-0;
+  }
+
+  .btn-secondary {
+    @apply btn bg-erased;
+  }
+  .btn-secondary:hover {
+    @apply bg-pen text-white;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white border-2 border-pencil shadow-soft p-6 relative;
+    border-radius: var(--wobble-md);
+  }
+
+  /* ── Inputs ── */
+  .input {
+    @apply w-full bg-white border-2 border-pencil px-4 py-3 font-hand
+           focus:border-pen focus:ring-2 focus:ring-pen/20
+           focus:outline-none transition-all;
+    border-radius: var(--wobble);
+  }
+
+  /* ── Progress bar ── */
+  .progress-track {
+    @apply w-full h-4 bg-erased border-2 border-pencil overflow-hidden;
+    border-radius: 999px;
+  }
+  .progress-fill {
+    @apply h-full bg-pen transition-all duration-500;
+  }
+  .progress-fill-error {
+    @apply h-full bg-marker transition-all duration-500;
+  }
+}
