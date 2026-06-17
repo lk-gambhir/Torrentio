@@ -1,12 +1,12 @@
 # Torrentino
 
-A full-stack, decentralized BitTorrent client built with Node.js and React. Torrentino provides a robust custom P2P networking engine for downloading torrents and a highly responsive, modern dashboard for managing active transfers in real-time.
+A full stack, decentralized BitTorrent client built with Node.js and React. Torrentino provides a robust custom P2P networking engine for downloading torrents and a highly responsive, modern dashboard for managing active transfers in real time.
 
 ## Features
 
 - **Custom BitTorrent Engine**: Implements the BitTorrent protocol natively in Node.js, featuring manual TCP peer handshakes and UDP tracker communication.
 - **Data Integrity & Recovery**: Includes built-in SHA-1 piece hashing to ensure file integrity, alongside an endgame recovery algorithm that aggressively re-requests dropped chunks.
-- **Real-Time Dashboard**: A React/Vite frontend that visualizes active peer clusters, live download speeds, and concurrent disk I/O metrics via asynchronous polling.
+- **Real-Time Dashboard**: A React frontend that visualizes active peer clusters, live download speeds, and concurrent disk I/O metrics via asynchronous polling.
 - **Secure File System Integration**: Sandboxed directory browsing and strict path validation prevent Zip Slip and path traversal vulnerabilities during multi-file torrent extraction.
 - **Modular Architecture**: Clean separation of concerns with dedicated controllers and global state management.
 
@@ -21,8 +21,8 @@ A full-stack, decentralized BitTorrent client built with Node.js and React. Torr
 Ensure you have [Node.js](https://nodejs.org/) installed, then clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/mytorrent-client.git
-cd mytorrent-client
+git clone https://github.com/lk-gambhir/Torrentio.git
+cd Torrentio
 ```
 
 ### Starting the Backend
