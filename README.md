@@ -1,4 +1,4 @@
-# Torrentino
+# Torrentio
 
 A full stack, decentralized BitTorrent client built with Node.js and React. Torrentino provides a robust custom P2P networking engine for downloading torrents and a highly responsive, modern dashboard for managing active transfers in real time.
 
